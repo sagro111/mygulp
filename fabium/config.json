@@ -1,0 +1,117 @@
+{
+	"paths": {
+		"root": "./",
+
+		"src": {
+			"path": "src",
+			"all": "src/**",
+			"styles": {
+				"all": "src/assets/styles/**/*.sass",
+				"main": "src/assets/styles/main.sass",
+				"mixins": "src/assets/styles/mixins/index.sass",
+				"path": "src/assets/styles"
+			},
+			"scripts": {
+				"all": "src/assets/scripts/**/*.js"
+			},
+			"images": {
+				"all": "src/assets/images/**/*.*",
+				"path": "src/assets/images"
+			},
+			"fonts": {
+				"all": "src/assets/fonts/**/*.*",
+				"path": "src/assets/fonts/"
+			},
+			"templates": {
+				"all": "src/templates/**/*.pug",
+				"path": "src/templates",
+				"components": {
+					"all": "src/templates/components/**/*.pug",
+					"path": "src/templates/components"
+				},
+				"pages": {
+					"all": "src/templates/pages/**/*.pug",
+					"path": "src/templates/pages",
+					"index": "src/templates/pages/index.pug"
+				}
+			}
+		},
+
+		"dist": {
+			"path": "public",
+			"all": "public/**",
+			"styles": {
+				"all": "public/assets/styles/**/*.css",
+				"path": "public/assets/styles",
+				"minified": {
+					"all": "public/assets/styles/**/*.min.css"
+				},
+				"rtl": {
+					"all": "public/assets/styles/**/*-rtl.css"
+				}
+			},
+			"scripts": {
+				"all": "public/assets/scripts/**/*.js",
+				"all_minified": "public/assets/scripts/**/*.min.js",
+				"path": "public/assets/scripts/"
+			},
+			"images": {
+				"all": "public/assets/images/**/*.*",
+				"path": "public/assets/images"
+			},
+			"libs": {
+				"path": "public/assets/libs/"
+			},
+			"templates": {
+				"all": "public/**/*.html"
+			},
+			"fonts": {
+				"path": "public/assets/fonts"
+			}
+
+		},
+
+		"archives": {
+			"path": "archives",
+			"dist": "archives/project_dist.zip",
+			"src": "archives/project_src.zip"
+		}
+	},
+
+	"plop": {
+		"placeholders": {
+			"append": "\n// APPEND HERE"
+		},
+		"styles": {
+			"component": {
+				"paths": {
+					"default": "src/assets/styles/components/{{kebabCase name}}/{{kebabCase name}}.sass",
+					"responsive": "src/assets/styles/components/{{kebabCase name}}/{{kebabCase name}}-responsive.sass"
+				},
+				"templates": {
+					"default": "fabium/plop/templates/styles/component.sass",
+					"responsive": "fabium/plop/templates/styles/component-responsive.sass"
+				}
+			},
+			"mixin": {
+				"path": "src/assets/styles/mixins/{{kebabCase name}}.sass",
+				"template": "fabium/plop/templates/styles/mixin.sass"
+			}
+		},
+
+		"templates": {
+			"component": {
+				"path": "src/templates/components/{{kebabCase name}}/{{kebabCase name}}.pug",
+				"template": "fabium/plop/templates/templates/component.pug"
+			},
+			"page": {
+				"path": "src/templates/pages/{{kebabCase name}}.pug",
+				"template": "fabium/plop/templates/templates/page.pug"
+			},
+			"layout": {
+				"path": "src/templates/layouts/{{kebabCase name}}.pug",
+				"template": "fabium/plop/templates/templates/layout.pug"
+			}
+		}
+	}
+}
